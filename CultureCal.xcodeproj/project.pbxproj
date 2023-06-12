@@ -1,0 +1,664 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6682ED682A0A788C00AC89DA /* CultureCalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682ED672A0A788C00AC89DA /* CultureCalApp.swift */; };
+		6682ED6A2A0A788C00AC89DA /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682ED692A0A788C00AC89DA /* CalendarView.swift */; };
+		6682ED6C2A0A788D00AC89DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6682ED6B2A0A788D00AC89DA /* Assets.xcassets */; };
+		6682ED6F2A0A788D00AC89DA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6682ED6E2A0A788D00AC89DA /* Preview Assets.xcassets */; };
+		6682ED792A0A788D00AC89DA /* CultureCalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682ED782A0A788D00AC89DA /* CultureCalTests.swift */; };
+		6682ED832A0A788D00AC89DA /* CultureCalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682ED822A0A788D00AC89DA /* CultureCalUITests.swift */; };
+		6682ED852A0A788D00AC89DA /* CultureCalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682ED842A0A788D00AC89DA /* CultureCalUITestsLaunchTests.swift */; };
+		6682EE092A15E93C00AC89DA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682EE082A15E93C00AC89DA /* HomeView.swift */; };
+		6682EE572A1F9D2100AC89DA /* FactListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682EE562A1F9D2100AC89DA /* FactListView.swift */; };
+		6682EE592A1FA5FA00AC89DA /* MissionStatementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682EE582A1FA5FA00AC89DA /* MissionStatementView.swift */; };
+		6682EE5B2A1FA8EC00AC89DA /* FactSheetView .swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682EE5A2A1FA8EC00AC89DA /* FactSheetView .swift */; };
+		6682EE5D2A1FABB400AC89DA /* FactDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682EE5C2A1FABB400AC89DA /* FactDescriptionView.swift */; };
+		6682EE5F2A1FAFB000AC89DA /* DataSource .swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682EE5E2A1FAFB000AC89DA /* DataSource .swift */; };
+		6682EE632A20E8F200AC89DA /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6682EE622A20E8F200AC89DA /* MonthView.swift */; };
+		66F656552A375C6700141517 /* Quotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F656542A375C6700141517 /* Quotes.swift */; };
+		66F656572A375E7A00141517 /* QuoteListView .swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F656562A375E7A00141517 /* QuoteListView .swift */; };
+		66F656592A37611D00141517 /* QuoteDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F656582A37611D00141517 /* QuoteDetailView.swift */; };
+		66F6565B2A3762A100141517 /* QuizListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6565A2A3762A100141517 /* QuizListView.swift */; };
+		66F6565D2A37635E00141517 /* QuizCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6565C2A37635E00141517 /* QuizCardView.swift */; };
+		66F6565F2A37645F00141517 /* QuizRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F6565E2A37645F00141517 /* QuizRowView.swift */; };
+		66F656612A3768D300141517 /* QuizDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F656602A3768D300141517 /* QuizDetailView.swift */; };
+		66F656632A376D0100141517 /* Mission Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F656622A376D0100141517 /* Mission Statement.swift */; };
+		66F656652A37741800141517 /* QuoteCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F656642A37741800141517 /* QuoteCardView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6682ED752A0A788D00AC89DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6682ED5C2A0A788C00AC89DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6682ED632A0A788C00AC89DA;
+			remoteInfo = CultureCal;
+		};
+		6682ED7F2A0A788D00AC89DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6682ED5C2A0A788C00AC89DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6682ED632A0A788C00AC89DA;
+			remoteInfo = CultureCal;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6682ED642A0A788C00AC89DA /* CultureCal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CultureCal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6682ED672A0A788C00AC89DA /* CultureCalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CultureCalApp.swift; sourceTree = "<group>"; };
+		6682ED692A0A788C00AC89DA /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		6682ED6B2A0A788D00AC89DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6682ED6E2A0A788D00AC89DA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6682ED742A0A788D00AC89DA /* CultureCalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CultureCalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6682ED782A0A788D00AC89DA /* CultureCalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CultureCalTests.swift; sourceTree = "<group>"; };
+		6682ED7E2A0A788D00AC89DA /* CultureCalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CultureCalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6682ED822A0A788D00AC89DA /* CultureCalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CultureCalUITests.swift; sourceTree = "<group>"; };
+		6682ED842A0A788D00AC89DA /* CultureCalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CultureCalUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6682EE082A15E93C00AC89DA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		6682EE562A1F9D2100AC89DA /* FactListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactListView.swift; sourceTree = "<group>"; };
+		6682EE582A1FA5FA00AC89DA /* MissionStatementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionStatementView.swift; sourceTree = "<group>"; };
+		6682EE5A2A1FA8EC00AC89DA /* FactSheetView .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FactSheetView .swift"; sourceTree = "<group>"; };
+		6682EE5C2A1FABB400AC89DA /* FactDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactDescriptionView.swift; sourceTree = "<group>"; };
+		6682EE5E2A1FAFB000AC89DA /* DataSource .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataSource .swift"; sourceTree = "<group>"; };
+		6682EE622A20E8F200AC89DA /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
+		66F656542A375C6700141517 /* Quotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quotes.swift; sourceTree = "<group>"; };
+		66F656562A375E7A00141517 /* QuoteListView .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuoteListView .swift"; sourceTree = "<group>"; };
+		66F656582A37611D00141517 /* QuoteDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteDetailView.swift; sourceTree = "<group>"; };
+		66F6565A2A3762A100141517 /* QuizListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizListView.swift; sourceTree = "<group>"; };
+		66F6565C2A37635E00141517 /* QuizCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCardView.swift; sourceTree = "<group>"; };
+		66F6565E2A37645F00141517 /* QuizRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizRowView.swift; sourceTree = "<group>"; };
+		66F656602A3768D300141517 /* QuizDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizDetailView.swift; sourceTree = "<group>"; };
+		66F656622A376D0100141517 /* Mission Statement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mission Statement.swift"; sourceTree = "<group>"; };
+		66F656642A37741800141517 /* QuoteCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCardView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6682ED612A0A788C00AC89DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6682ED712A0A788D00AC89DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6682ED7B2A0A788D00AC89DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6682ED5B2A0A788C00AC89DA = {
+			isa = PBXGroup;
+			children = (
+				6682ED662A0A788C00AC89DA /* CultureCal */,
+				6682ED772A0A788D00AC89DA /* CultureCalTests */,
+				6682ED812A0A788D00AC89DA /* CultureCalUITests */,
+				6682ED652A0A788C00AC89DA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6682ED652A0A788C00AC89DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6682ED642A0A788C00AC89DA /* CultureCal.app */,
+				6682ED742A0A788D00AC89DA /* CultureCalTests.xctest */,
+				6682ED7E2A0A788D00AC89DA /* CultureCalUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6682ED662A0A788C00AC89DA /* CultureCal */ = {
+			isa = PBXGroup;
+			children = (
+				6682ED672A0A788C00AC89DA /* CultureCalApp.swift */,
+				66F656642A37741800141517 /* QuoteCardView.swift */,
+				6682EE082A15E93C00AC89DA /* HomeView.swift */,
+				6682ED692A0A788C00AC89DA /* CalendarView.swift */,
+				6682EE622A20E8F200AC89DA /* MonthView.swift */,
+				6682EE582A1FA5FA00AC89DA /* MissionStatementView.swift */,
+				66F656622A376D0100141517 /* Mission Statement.swift */,
+				66F656602A3768D300141517 /* QuizDetailView.swift */,
+				66F6565E2A37645F00141517 /* QuizRowView.swift */,
+				66F6565C2A37635E00141517 /* QuizCardView.swift */,
+				66F6565A2A3762A100141517 /* QuizListView.swift */,
+				66F656582A37611D00141517 /* QuoteDetailView.swift */,
+				66F656562A375E7A00141517 /* QuoteListView .swift */,
+				66F656542A375C6700141517 /* Quotes.swift */,
+				6682EE5C2A1FABB400AC89DA /* FactDescriptionView.swift */,
+				6682EE5A2A1FA8EC00AC89DA /* FactSheetView .swift */,
+				6682EE562A1F9D2100AC89DA /* FactListView.swift */,
+				6682EE5E2A1FAFB000AC89DA /* DataSource .swift */,
+				6682ED6B2A0A788D00AC89DA /* Assets.xcassets */,
+				6682ED6D2A0A788D00AC89DA /* Preview Content */,
+			);
+			path = CultureCal;
+			sourceTree = "<group>";
+		};
+		6682ED6D2A0A788D00AC89DA /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				6682ED6E2A0A788D00AC89DA /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6682ED772A0A788D00AC89DA /* CultureCalTests */ = {
+			isa = PBXGroup;
+			children = (
+				6682ED782A0A788D00AC89DA /* CultureCalTests.swift */,
+			);
+			path = CultureCalTests;
+			sourceTree = "<group>";
+		};
+		6682ED812A0A788D00AC89DA /* CultureCalUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6682ED822A0A788D00AC89DA /* CultureCalUITests.swift */,
+				6682ED842A0A788D00AC89DA /* CultureCalUITestsLaunchTests.swift */,
+			);
+			path = CultureCalUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6682ED632A0A788C00AC89DA /* CultureCal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6682ED882A0A788D00AC89DA /* Build configuration list for PBXNativeTarget "CultureCal" */;
+			buildPhases = (
+				6682ED602A0A788C00AC89DA /* Sources */,
+				6682ED612A0A788C00AC89DA /* Frameworks */,
+				6682ED622A0A788C00AC89DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CultureCal;
+			productName = CultureCal;
+			productReference = 6682ED642A0A788C00AC89DA /* CultureCal.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6682ED732A0A788D00AC89DA /* CultureCalTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6682ED8B2A0A788D00AC89DA /* Build configuration list for PBXNativeTarget "CultureCalTests" */;
+			buildPhases = (
+				6682ED702A0A788D00AC89DA /* Sources */,
+				6682ED712A0A788D00AC89DA /* Frameworks */,
+				6682ED722A0A788D00AC89DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6682ED762A0A788D00AC89DA /* PBXTargetDependency */,
+			);
+			name = CultureCalTests;
+			productName = CultureCalTests;
+			productReference = 6682ED742A0A788D00AC89DA /* CultureCalTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6682ED7D2A0A788D00AC89DA /* CultureCalUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6682ED8E2A0A788D00AC89DA /* Build configuration list for PBXNativeTarget "CultureCalUITests" */;
+			buildPhases = (
+				6682ED7A2A0A788D00AC89DA /* Sources */,
+				6682ED7B2A0A788D00AC89DA /* Frameworks */,
+				6682ED7C2A0A788D00AC89DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6682ED802A0A788D00AC89DA /* PBXTargetDependency */,
+			);
+			name = CultureCalUITests;
+			productName = CultureCalUITests;
+			productReference = 6682ED7E2A0A788D00AC89DA /* CultureCalUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6682ED5C2A0A788C00AC89DA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					6682ED632A0A788C00AC89DA = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					6682ED732A0A788D00AC89DA = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 6682ED632A0A788C00AC89DA;
+					};
+					6682ED7D2A0A788D00AC89DA = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 6682ED632A0A788C00AC89DA;
+					};
+				};
+			};
+			buildConfigurationList = 6682ED5F2A0A788C00AC89DA /* Build configuration list for PBXProject "CultureCal" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6682ED5B2A0A788C00AC89DA;
+			productRefGroup = 6682ED652A0A788C00AC89DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6682ED632A0A788C00AC89DA /* CultureCal */,
+				6682ED732A0A788D00AC89DA /* CultureCalTests */,
+				6682ED7D2A0A788D00AC89DA /* CultureCalUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6682ED622A0A788C00AC89DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6682ED6F2A0A788D00AC89DA /* Preview Assets.xcassets in Resources */,
+				6682ED6C2A0A788D00AC89DA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6682ED722A0A788D00AC89DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6682ED7C2A0A788D00AC89DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6682ED602A0A788C00AC89DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66F6565D2A37635E00141517 /* QuizCardView.swift in Sources */,
+				66F656572A375E7A00141517 /* QuoteListView .swift in Sources */,
+				6682EE632A20E8F200AC89DA /* MonthView.swift in Sources */,
+				6682ED6A2A0A788C00AC89DA /* CalendarView.swift in Sources */,
+				6682EE5B2A1FA8EC00AC89DA /* FactSheetView .swift in Sources */,
+				66F656592A37611D00141517 /* QuoteDetailView.swift in Sources */,
+				6682ED682A0A788C00AC89DA /* CultureCalApp.swift in Sources */,
+				66F6565F2A37645F00141517 /* QuizRowView.swift in Sources */,
+				66F656552A375C6700141517 /* Quotes.swift in Sources */,
+				6682EE572A1F9D2100AC89DA /* FactListView.swift in Sources */,
+				6682EE092A15E93C00AC89DA /* HomeView.swift in Sources */,
+				66F656612A3768D300141517 /* QuizDetailView.swift in Sources */,
+				6682EE5D2A1FABB400AC89DA /* FactDescriptionView.swift in Sources */,
+				66F656652A37741800141517 /* QuoteCardView.swift in Sources */,
+				6682EE592A1FA5FA00AC89DA /* MissionStatementView.swift in Sources */,
+				66F656632A376D0100141517 /* Mission Statement.swift in Sources */,
+				6682EE5F2A1FAFB000AC89DA /* DataSource .swift in Sources */,
+				66F6565B2A3762A100141517 /* QuizListView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6682ED702A0A788D00AC89DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6682ED792A0A788D00AC89DA /* CultureCalTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6682ED7A2A0A788D00AC89DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6682ED852A0A788D00AC89DA /* CultureCalUITestsLaunchTests.swift in Sources */,
+				6682ED832A0A788D00AC89DA /* CultureCalUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6682ED762A0A788D00AC89DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6682ED632A0A788C00AC89DA /* CultureCal */;
+			targetProxy = 6682ED752A0A788D00AC89DA /* PBXContainerItemProxy */;
+		};
+		6682ED802A0A788D00AC89DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6682ED632A0A788C00AC89DA /* CultureCal */;
+			targetProxy = 6682ED7F2A0A788D00AC89DA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		6682ED862A0A788D00AC89DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6682ED872A0A788D00AC89DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6682ED892A0A788D00AC89DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CultureCal/Preview Content\"";
+				DEVELOPMENT_TEAM = FGK773Y5UU;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = CultureCal;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "The app uses Calendar access to send facts for each day of the year to the user's Calendar.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 5.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MSU.CultureCal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		6682ED8A2A0A788D00AC89DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CultureCal/Preview Content\"";
+				DEVELOPMENT_TEAM = FGK773Y5UU;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = CultureCal;
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "The app uses Calendar access to send facts for each day of the year to the user's Calendar.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 5.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MSU.CultureCal;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		6682ED8C2A0A788D00AC89DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FGK773Y5UU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MSU.CultureCalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CultureCal.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CultureCal";
+			};
+			name = Debug;
+		};
+		6682ED8D2A0A788D00AC89DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FGK773Y5UU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MSU.CultureCalTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CultureCal.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CultureCal";
+			};
+			name = Release;
+		};
+		6682ED8F2A0A788D00AC89DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FGK773Y5UU;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MSU.CultureCalUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CultureCal;
+			};
+			name = Debug;
+		};
+		6682ED902A0A788D00AC89DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FGK773Y5UU;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = MSU.CultureCalUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CultureCal;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6682ED5F2A0A788C00AC89DA /* Build configuration list for PBXProject "CultureCal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6682ED862A0A788D00AC89DA /* Debug */,
+				6682ED872A0A788D00AC89DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6682ED882A0A788D00AC89DA /* Build configuration list for PBXNativeTarget "CultureCal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6682ED892A0A788D00AC89DA /* Debug */,
+				6682ED8A2A0A788D00AC89DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6682ED8B2A0A788D00AC89DA /* Build configuration list for PBXNativeTarget "CultureCalTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6682ED8C2A0A788D00AC89DA /* Debug */,
+				6682ED8D2A0A788D00AC89DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6682ED8E2A0A788D00AC89DA /* Build configuration list for PBXNativeTarget "CultureCalUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6682ED8F2A0A788D00AC89DA /* Debug */,
+				6682ED902A0A788D00AC89DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6682ED5C2A0A788C00AC89DA /* Project object */;
+}
