@@ -7,6 +7,18 @@
 
 import SwiftUI
 
+struct Quiz: Identifiable {
+    let id = UUID()
+    let question: String
+    let answer: String
+    var isAnswered: Bool = false // New property
+}
+
+struct QuizState {
+        var quiz: Quiz
+        var isAnswered: Bool = false
+    }
+
 struct QuizListView: View {
     let quizzes: [Quiz] = [
         Quiz(question: "Who was the first African American President of the United States?", answer: "Barack Obama"),

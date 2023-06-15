@@ -73,7 +73,7 @@ struct CalendarView: View {
                         VStack(spacing: 8) {
                             Text("Today In Black History")
                                 .font(.headline)
-                                .foregroundColor(.black)
+                            
                             
                             Text(factOfTheDay.title)
                                 .font(.headline)

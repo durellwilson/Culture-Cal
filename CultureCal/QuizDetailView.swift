@@ -36,10 +36,12 @@ struct QuizDetailView: View {
             }
             .disabled(userAnswer.isEmpty || isAnswerCorrect)
             
-            Text(isAnswerCorrect ? "Correct!" : "Incorrect!")
-                .font(.title)
-                .fontWeight(.bold)
-                .foregroundColor(isAnswerCorrect ? .green : .red)
+            if !userAnswer.isEmpty {
+                Text(isAnswerCorrect ? "Correct!" : "Incorrect!")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundColor(isAnswerCorrect ? .green : .red)
+            }
             
             Text("Score: \(correctAnswers)/\(totalQuestions)")
                 .font(.headline)
@@ -72,5 +74,3 @@ struct QuizDetailView: View {
         totalQuestions -= 1
     }
 }
-
-
