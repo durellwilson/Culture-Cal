@@ -4,7 +4,6 @@
 //
 //  Created by Kelly Brown on 6/12/23.
 //
-
 import SwiftUI
 
 struct QuoteListView: View {
@@ -30,8 +29,9 @@ struct QuoteListView: View {
                                 Text(quote.author)
                                     .font(.title)
                                     .fontWeight(.bold)
-                                    .scaledToFit()
-                                    .lineLimit(1)
+                                    .multilineTextAlignment(.leading) // Allow multiple lines for author name
+                                    .lineLimit(nil) // Remove line limit for author name
+                                    .fixedSize(horizontal: false, vertical: true) // Allow the text to wrap
                             }
                             if selectedQuote != quote {
                                 Text(quote.text)
