@@ -7,11 +7,12 @@
 
 import SwiftUI
 
-struct Quiz: Identifiable {
+struct Quiz: Identifiable ,Equatable {
     let id = UUID()
     let question: String
     let answer: String
     var isAnswered: Bool = false // New property
+    var isAnsweredCorrectly: Bool = false
 }
 
 struct QuizState {
@@ -20,7 +21,7 @@ struct QuizState {
     }
 
 struct QuizListView: View {
-    let quizzes: [Quiz] = [
+    var quizzes: [Quiz] = [
         Quiz(question: "Who was the first African American President of the United States?", answer: "Barack Obama"),
         Quiz(question: "Who is often referred to as the 'Mother of the Civil Rights Movement'?", answer: "Rosa Parks"),
         Quiz(question: "Who wrote the famous poem 'I Know Why the Caged Bird Sings'?", answer: "Maya Angelou"),
@@ -54,42 +55,45 @@ struct QuizListView: View {
     ]
     
     @State private var selectedQuiz: Quiz?
-    @State private var totalQuestions: Int = 0
-    @State private var correctAnswers: Int = 0
-    @Environment(\.presentationMode) var presentationMode
-    
-    var body: some View {
-        NavigationView {
-            ScrollView {
-                VStack(spacing: 16) {
-                    ForEach(quizzes) { quiz in
-                        QuizCardView(quiz: quiz)
-                            .onTapGesture {
-                                selectedQuiz = quiz
-                            }
+        @State private var totalQuestions: Int = 0
+        @State private var correctAnswers: Int = 0
+        @Environment(\.presentationMode) var presentationMode
+        
+        var body: some View {
+            NavigationView {
+                ScrollView {
+                    LazyVStack(spacing: 16) {
+                        ForEach(quizzes) { quiz in
+                            QuizCardView(quiz: quiz)
+                                .onTapGesture {
+                                    selectedQuiz = quiz
+                                }
+                        }
                     }
+                    .padding(.vertical)
                 }
-                .padding(.vertical)
+                .background(Color(.systemGray6))
+                .navigationBarTitle("Legacy Quiz")
+                .navigationBarHidden(false)
             }
-            .background(Color(.systemGray6))
-            .navigationBarTitle("Black History Quizzes")
-            .navigationBarHidden(true)
+            .sheet(item: $selectedQuiz) { quiz in
+                QuizDetailView(
+                    quiz: quiz,
+                    totalQuestions: $totalQuestions
+                )
+            }
+            .onAppear {
+                totalQuestions = quizzes.count
+                correctAnswers = 0
+            }
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(trailing: Button(action: {
+                presentationMode.wrappedValue.dismiss()
+            }) {
+                Text("Done")
+            })
         }
-        .sheet(item: $selectedQuiz) { quiz in
-            QuizDetailView(quiz: quiz, totalQuestions: $totalQuestions, correctAnswers: $correctAnswers)
-        }
-        .onAppear {
-            totalQuestions = quizzes.count
-            correctAnswers = 0
-        }
-        .navigationBarBackButtonHidden(true)
-        .navigationBarItems(trailing: Button(action: {
-            presentationMode.wrappedValue.dismiss()
-        }) {
-            Text("Done")
-        })
     }
-}
 struct QuizListView_Previews: PreviewProvider {
     static var previews: some View {
         QuizListView()

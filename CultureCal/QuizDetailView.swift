@@ -4,15 +4,14 @@
 //
 //  Created by Kelly Brown on 6/12/23.
 //
-
 import SwiftUI
 
 struct QuizDetailView: View {
     var quiz: Quiz
     @Binding var totalQuestions: Int
-    @Binding var correctAnswers: Int
     @State private var userAnswer = ""
-    @State private var isAnswerCorrect = false
+    @State private var isAnswerCorrect: Bool?
+    @State private var score = UserDefaults.standard.integer(forKey: "QuizScore")
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
@@ -34,16 +33,15 @@ struct QuizDetailView: View {
                     .background(Color("FistGreen"))
                     .cornerRadius(10)
             }
-            .disabled(userAnswer.isEmpty || isAnswerCorrect)
             
-            if !userAnswer.isEmpty {
+            if let isAnswerCorrect = isAnswerCorrect {
                 Text(isAnswerCorrect ? "Correct!" : "Incorrect!")
                     .font(.title)
                     .fontWeight(.bold)
                     .foregroundColor(isAnswerCorrect ? .green : .red)
             }
             
-            Text("Score: \(correctAnswers)/\(totalQuestions)")
+            Text("Score: \(calculateScore())%")
                 .font(.headline)
                 .foregroundColor(Color("FistGreen"))
             
@@ -62,15 +60,28 @@ struct QuizDetailView: View {
         .padding()
         .onAppear {
             userAnswer = ""
-            isAnswerCorrect = false
+            isAnswerCorrect = nil
         }
     }
     
     private func checkAnswer() {
-        isAnswerCorrect = userAnswer.lowercased() == quiz.answer.lowercased()
-        if isAnswerCorrect {
-            correctAnswers += 1
+        guard !userAnswer.isEmpty else { return }
+        
+        let lowercasedUserAnswer = userAnswer.lowercased()
+        let lowercasedCorrectAnswer = quiz.answer.lowercased()
+        
+        isAnswerCorrect = lowercasedUserAnswer == lowercasedCorrectAnswer
+        
+        if isAnswerCorrect == true {
+            score += 1
+            UserDefaults.standard.set(score, forKey: "QuizScore")
         }
+        
         totalQuestions -= 1
+    }
+    
+    private func calculateScore() -> Int {
+        let percentage = Double(score) / Double(totalQuestions) * 100
+        return Int(percentage)
     }
 }

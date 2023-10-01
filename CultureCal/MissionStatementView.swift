@@ -70,17 +70,17 @@ struct MissionStatementButton: View {
         HStack {
             Text(title)
                 .font(.headline)
-                .foregroundColor(.primary)
+                //.foregroundColor(.primary)
             
             Spacer()
             
             Image(systemName: "chevron.right")
                 .font(.headline)
-                .foregroundColor(.primary)
+               // .foregroundColor(.primary)
         }
         .padding(.vertical, 8)
         .padding(.horizontal, 16)
-        .background(Color.white)
+       // .background(Color.white)
         .cornerRadius(10)
         .shadow(color: Color(.systemGray4), radius: 4, x: 0, y: 2)
     }
@@ -97,63 +97,65 @@ struct StemView: View {
         Innovator(name: "Dr. Shirley Ann Jackson", imageName: "Dr. Shirley Ann Jackson", story: "Dr. Shirley Ann Jackson (1946-present): Dr. Jackson is a theoretical physicist who became the first African-American woman to earn a Ph.D. from MIT. She conducted research at Bell Laboratories, where she made significant contributions to telecommunications theory, including the development of fiber optic cables, solar cells, and touch-tone telephones. Dr. Jackson served as the chair of the U.S. Nuclear Regulatory Commission and is currently the president of Rensselaer Polytechnic Institute."),
         Innovator(name: "Kimberly Bryant", imageName: "Kimberly Bryant", story: "Kimberly Bryant (1967-present): Kimberly Bryant is the founder of Black Girls CODE, a non-profit organization that aims to introduce young black girls to computer programming and technology. Her organization provides coding workshops and classes to empower and inspire the next generation of black innovators in tech.")
     ]
+    
     @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
         ScrollView {
             VStack(spacing: 16) {
                 ForEach(innovators) { innovator in
-                    Button(action: {
-                        toggleSelectedInnovator(innovator)
-                    }) {
-                        ZStack {
-                            Rectangle()
-                                .foregroundColor(Color.white)
-                                .cornerRadius(10)
-                                .shadow(color: .gray, radius: 4, x: 0, y: 2)
-                            
-                            HStack(spacing: 16) {
-                                Image(innovator.imageName)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 100, height: 100)
+                    VStack {
+                        Button(action: {
+                            toggleSelectedInnovator(innovator)
+                        }) {
+                            ZStack {
+                                Rectangle()
+                                    .foregroundColor(Color.white)
                                     .cornerRadius(10)
+                                    .shadow(color: .gray, radius: 4, x: 0, y: 2)
                                 
-                                VStack(alignment: .leading, spacing: 8) {
-                                    Text(innovator.name)
-                                        .font(.title)
-                                        .fontWeight(.bold)
-                                    
+                                VStack(spacing: 16) {
+                                    HStack(spacing: 16) {
+                                        Image(innovator.imageName)
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .frame(width: 100, height: 100)
+                                            .cornerRadius(10)
+                                        
+                                        Text(innovator.name)
+                                            .font(.title)
+                                            .fontWeight(.bold)
+                                    }
                                     if selectedInnovator != innovator {
                                         Text(innovator.story)
                                             .font(.body)
                                             .lineLimit(3)
                                     }
                                 }
+                                .padding(16)
                             }
-                            .padding(16)
                         }
-                    }
-                    .buttonStyle(PlainButtonStyle())
-                    
-                    if let selectedInnovator = selectedInnovator, selectedInnovator == innovator {
-                        VStack {
-                            Image(innovator.imageName)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .cornerRadius(10)
-                            
-                            Text(innovator.name)
-                                .font(.title)
-                                .fontWeight(.bold)
-                            
-                            Text(innovator.story)
-                                .font(.body)
-                                .multilineTextAlignment(.center)
+                        .buttonStyle(PlainButtonStyle())
+                        
+                        if let selectedInnovator = selectedInnovator, selectedInnovator == innovator {
+                            VStack {
+                                Image(innovator.imageName)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .cornerRadius(10)
+                                
+                                Text(innovator.name)
+                                    .font(.title)
+                                    .fontWeight(.bold)
+                                
+                                Text(innovator.story)
+                                    .font(.body)
+                                    .multilineTextAlignment(.center)
+                            }
+                            .padding()
                         }
-                        .padding()
                     }
                 }
-                
                 Spacer()
             }
             .padding()
@@ -165,8 +167,9 @@ struct StemView: View {
             presentationMode.wrappedValue.dismiss()
         }) {
             Text("Done")
-        }
-                            )}
+        })
+    }
+    
     private func toggleSelectedInnovator(_ innovator: Innovator) {
         if selectedInnovator == innovator {
             selectedInnovator = nil
@@ -175,7 +178,6 @@ struct StemView: View {
         }
     }
 }
-
 
 struct Innovator: Identifiable, Equatable {
     let id = UUID()
