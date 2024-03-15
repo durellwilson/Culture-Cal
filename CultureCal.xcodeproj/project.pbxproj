@@ -31,6 +31,12 @@
 		66F656632A376D0100141517 /* Mission Statement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F656622A376D0100141517 /* Mission Statement.swift */; };
 		66F656652A37741800141517 /* QuoteCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F656642A37741800141517 /* QuoteCardView.swift */; };
 		66F656672A3A116F00141517 /* InkOfColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F656662A3A116F00141517 /* InkOfColorView.swift */; };
+		7168E2112BA491F700486B34 /* Silom.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7168E2102BA491F700486B34 /* Silom.ttf */; };
+		718DE55D2BA0A0AE003BA8CE /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718DE55C2BA0A0AE003BA8CE /* HeaderView.swift */; };
+		718DE5682BA0A45C003BA8CE /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718DE5672BA0A45C003BA8CE /* Fact.swift */; };
+		718DE56C2BA0A4A0003BA8CE /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718DE56B2BA0A4A0003BA8CE /* Book.swift */; };
+		718DE56D2BA0A4A0003BA8CE /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718DE56B2BA0A4A0003BA8CE /* Book.swift */; };
+		718DE56E2BA0A4A0003BA8CE /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718DE56B2BA0A4A0003BA8CE /* Book.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +59,7 @@
 /* Begin PBXFileReference section */
 		6682ED642A0A788C00AC89DA /* CultureCal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CultureCal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6682ED672A0A788C00AC89DA /* CultureCalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CultureCalApp.swift; sourceTree = "<group>"; };
-		6682ED692A0A788C00AC89DA /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		6682ED692A0A788C00AC89DA /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; wrapsLines = 1; };
 		6682ED6B2A0A788D00AC89DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6682ED6E2A0A788D00AC89DA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6682ED742A0A788D00AC89DA /* CultureCalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CultureCalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +84,11 @@
 		66F656622A376D0100141517 /* Mission Statement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mission Statement.swift"; sourceTree = "<group>"; };
 		66F656642A37741800141517 /* QuoteCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCardView.swift; sourceTree = "<group>"; };
 		66F656662A3A116F00141517 /* InkOfColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InkOfColorView.swift; sourceTree = "<group>"; };
+		7168E2102BA491F700486B34 /* Silom.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Silom.ttf; sourceTree = "<group>"; };
+		7168E2142BA4936100486B34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		718DE55C2BA0A0AE003BA8CE /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		718DE5672BA0A45C003BA8CE /* Fact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
+		718DE56B2BA0A4A0003BA8CE /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,26 +139,12 @@
 		6682ED662A0A788C00AC89DA /* CultureCal */ = {
 			isa = PBXGroup;
 			children = (
+				7168E2142BA4936100486B34 /* Info.plist */,
 				6682ED672A0A788C00AC89DA /* CultureCalApp.swift */,
-				66F656642A37741800141517 /* QuoteCardView.swift */,
-				6682EE082A15E93C00AC89DA /* HomeView.swift */,
-				6682ED692A0A788C00AC89DA /* CalendarView.swift */,
-				6682EE622A20E8F200AC89DA /* MonthView.swift */,
-				6682EE582A1FA5FA00AC89DA /* MissionStatementView.swift */,
-				66F656662A3A116F00141517 /* InkOfColorView.swift */,
-				66F656622A376D0100141517 /* Mission Statement.swift */,
-				66F656602A3768D300141517 /* QuizDetailView.swift */,
-				66F6565E2A37645F00141517 /* QuizRowView.swift */,
-				66F6565C2A37635E00141517 /* QuizCardView.swift */,
-				66F6565A2A3762A100141517 /* QuizListView.swift */,
-				66F656582A37611D00141517 /* QuoteDetailView.swift */,
-				66F656562A375E7A00141517 /* QuoteListView .swift */,
-				66F656542A375C6700141517 /* Quotes.swift */,
-				6682EE5C2A1FABB400AC89DA /* FactDescriptionView.swift */,
-				6682EE5A2A1FA8EC00AC89DA /* FactSheetView .swift */,
-				6682EE562A1F9D2100AC89DA /* FactListView.swift */,
 				6682EE5E2A1FAFB000AC89DA /* DataSource .swift */,
-				6682ED6B2A0A788D00AC89DA /* Assets.xcassets */,
+				718DE5632BA0A3AD003BA8CE /* Views */,
+				718DE5662BA0A427003BA8CE /* Models */,
+				718DE5622BA0A396003BA8CE /* Resources */,
 				6682ED6D2A0A788D00AC89DA /* Preview Content */,
 			);
 			path = CultureCal;
@@ -176,6 +173,81 @@
 				6682ED842A0A788D00AC89DA /* CultureCalUITestsLaunchTests.swift */,
 			);
 			path = CultureCalUITests;
+			sourceTree = "<group>";
+		};
+		7168E20F2BA491E700486B34 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7168E2102BA491F700486B34 /* Silom.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		718DE5622BA0A396003BA8CE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7168E20F2BA491E700486B34 /* Fonts */,
+				6682ED6B2A0A788D00AC89DA /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		718DE5632BA0A3AD003BA8CE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6682EE082A15E93C00AC89DA /* HomeView.swift */,
+				6682ED692A0A788C00AC89DA /* CalendarView.swift */,
+				718DE55C2BA0A0AE003BA8CE /* HeaderView.swift */,
+				6682EE622A20E8F200AC89DA /* MonthView.swift */,
+				6682EE582A1FA5FA00AC89DA /* MissionStatementView.swift */,
+				66F656622A376D0100141517 /* Mission Statement.swift */,
+				66F656662A3A116F00141517 /* InkOfColorView.swift */,
+				718DE56F2BA0A4D8003BA8CE /* Quiz */,
+				718DE5702BA0A51D003BA8CE /* Quotes */,
+				718DE5712BA0A52A003BA8CE /* Facts */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		718DE5662BA0A427003BA8CE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				718DE5672BA0A45C003BA8CE /* Fact.swift */,
+				66F656542A375C6700141517 /* Quotes.swift */,
+				718DE56B2BA0A4A0003BA8CE /* Book.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		718DE56F2BA0A4D8003BA8CE /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				66F656602A3768D300141517 /* QuizDetailView.swift */,
+				66F6565E2A37645F00141517 /* QuizRowView.swift */,
+				66F6565C2A37635E00141517 /* QuizCardView.swift */,
+				66F6565A2A3762A100141517 /* QuizListView.swift */,
+			);
+			path = Quiz;
+			sourceTree = "<group>";
+		};
+		718DE5702BA0A51D003BA8CE /* Quotes */ = {
+			isa = PBXGroup;
+			children = (
+				66F656582A37611D00141517 /* QuoteDetailView.swift */,
+				66F656642A37741800141517 /* QuoteCardView.swift */,
+				66F656562A375E7A00141517 /* QuoteListView .swift */,
+			);
+			path = Quotes;
+			sourceTree = "<group>";
+		};
+		718DE5712BA0A52A003BA8CE /* Facts */ = {
+			isa = PBXGroup;
+			children = (
+				6682EE5C2A1FABB400AC89DA /* FactDescriptionView.swift */,
+				6682EE5A2A1FA8EC00AC89DA /* FactSheetView .swift */,
+				6682EE562A1F9D2100AC89DA /* FactListView.swift */,
+			);
+			path = Facts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,7 +314,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					6682ED632A0A788C00AC89DA = {
 						CreatedOnToolsVersion = 14.3;
@@ -284,6 +356,7 @@
 			files = (
 				6682ED6F2A0A788D00AC89DA /* Preview Assets.xcassets in Resources */,
 				6682ED6C2A0A788D00AC89DA /* Assets.xcassets in Resources */,
+				7168E2112BA491F700486B34 /* Silom.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,7 +395,10 @@
 				6682EE092A15E93C00AC89DA /* HomeView.swift in Sources */,
 				66F656612A3768D300141517 /* QuizDetailView.swift in Sources */,
 				6682EE5D2A1FABB400AC89DA /* FactDescriptionView.swift in Sources */,
+				718DE56C2BA0A4A0003BA8CE /* Book.swift in Sources */,
 				66F656652A37741800141517 /* QuoteCardView.swift in Sources */,
+				718DE55D2BA0A0AE003BA8CE /* HeaderView.swift in Sources */,
+				718DE5682BA0A45C003BA8CE /* Fact.swift in Sources */,
 				6682EE592A1FA5FA00AC89DA /* MissionStatementView.swift in Sources */,
 				66F656632A376D0100141517 /* Mission Statement.swift in Sources */,
 				6682EE5F2A1FAFB000AC89DA /* DataSource .swift in Sources */,
@@ -334,6 +410,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				718DE56D2BA0A4A0003BA8CE /* Book.swift in Sources */,
 				6682ED792A0A788D00AC89DA /* CultureCalTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +421,7 @@
 			files = (
 				6682ED852A0A788D00AC89DA /* CultureCalUITestsLaunchTests.swift in Sources */,
 				6682ED832A0A788D00AC89DA /* CultureCalUITests.swift in Sources */,
+				718DE56E2BA0A4A0003BA8CE /* Book.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +477,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -413,6 +492,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -459,6 +542,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -467,6 +551,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -486,17 +574,20 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CultureCal/Preview Content\"";
-				DEVELOPMENT_TEAM = FGK773Y5UU;
+				DEVELOPMENT_TEAM = 33MMZBSD6D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CultureCal/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = CultureCal;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_NSCalendarsUsageDescription = "The app uses Calendar access to send facts for each day of the year to the user's Calendar.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -522,17 +613,20 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"CultureCal/Preview Content\"";
-				DEVELOPMENT_TEAM = FGK773Y5UU;
+				DEVELOPMENT_TEAM = 33MMZBSD6D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CultureCal/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = CultureCal;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_NSCalendarsUsageDescription = "The app uses Calendar access to send facts for each day of the year to the user's Calendar.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

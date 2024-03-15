@@ -47,128 +47,181 @@ struct CalendarView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                HStack {
-                    NavigationLink(destination: MissionStatementView()) {
-                        Image("Fist")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(height: 75)
-                            .padding()
+            ZStack {
+                VStack(alignment: .leading, spacing: 0) {
+                    Rectangle()
+                        .ignoresSafeArea()
+                        .frame(maxWidth: .infinity, maxHeight: 10)
+                        .foregroundColor(Color("Golden"))
+                    Rectangle()
+                        .ignoresSafeArea()
+                        .frame(maxWidth: .infinity, maxHeight: 35)
+                        .foregroundColor(Color(.red))
+                    Rectangle()
+                        .ignoresSafeArea()
+                        .frame(maxWidth: .infinity, maxHeight: 10)
+                        .foregroundColor(Color("Golden"))
+                    ZStack {
+                        Rectangle()
+                            .ignoresSafeArea()
+                            .frame(maxWidth: .infinity, maxHeight: 132)
+                        .foregroundColor(Color(.black))
+                        Text("Today In Black History")
+                            .font(Font.custom("Silom", size: 30))
+                            .lineSpacing(40)
+                            .foregroundColor(Color(.white))
+                            .multilineTextAlignment(.center)
+                            .padding(.top, 50.0)
+
                     }
+                    
+                    Rectangle()
+                        .ignoresSafeArea()
+                        .frame(maxWidth: .infinity, maxHeight: 10)
+                        .foregroundColor(Color("Golden"))
+
+                    Rectangle()
+                        .ignoresSafeArea()
+                        .frame(maxWidth: .infinity, maxHeight: 35)
+                        .foregroundColor(Color("FistGreen"))
+                    
+                    Rectangle()
+                        .ignoresSafeArea()
+                        .frame(maxWidth: .infinity, maxHeight: 10)
+                        .foregroundColor(Color("Golden"))
                     
                     Spacer()
-                    
-                    Button(action: {
-                        isFactListPresented = true
-                    }) {
-                        Image(systemName: "list.bullet")
-                            .foregroundColor(Color("FistGreen"))
-                            .padding(.bottom, 30)
-                            .frame(width: 70, height: 90)
-                            .imageScale(.large)
-                    }
                 }
                 
-                ScrollView {
-                    VStack(spacing: 8) {
-                        Text("Today In Black History")
-                            .font(.headline)
-                    
-                        Text(factOfTheDay.title)
-                            .font(.headline)
-                            .foregroundColor(.red)
-                            .multilineTextAlignment(.center)
+                VStack {
+                    HStack {
+                        NavigationLink(destination: MissionStatementView()) {
+                            //image with circle barckground
+                            Image("Fist")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(height: 70)
+                                .clipShape(RoundedRectangle(cornerRadius: 60, style: .continuous))
+                                .overlay(RoundedRectangle(cornerRadius: 60, style: .continuous).stroke(Color("FistGreen"), lineWidth: 5))
+                                
+
+                        }.padding(.leading, 10)
                         
-                        Text(factOfTheDay.content)
-                            .font(.body)
-                            .foregroundColor(Color("FistGreen"))
-                            .multilineTextAlignment(.center)
-                    }
-                    .padding(.horizontal)
-                    .padding(.leading, -5)
-                }
-                
-                Picker("Month", selection: $selectedMonth) {
-                    ForEach(1..<13) { month in
-                        Text(self.months[month - 1])
-                            .tag(month)
-                            .foregroundColor(Color("FistGreen"))
-                    }
-                }
-                .pickerStyle(WheelPickerStyle())
-                .padding(.top)
-                
-                LazyVGrid(columns: Array(repeating: GridItem(), count: 7), spacing: 16) {
-                    ForEach(getDaysOfMonth(), id: \.self) { day in
+                        
+                        Spacer()
+                        
                         Button(action: {
-                            withAnimation {
-                                selectedDate = day
-                                factOfTheDay = fetchFactOfTheDay(for: day)
-                                isFactDisplayed = true
-                            }
-                            toggleFavoriteFact(factOfTheDay)
+                            isFactListPresented = true
                         }) {
-                            Text(getDayNumber(from: day))
-                                .font(.headline)
-                                .frame(width: 30, height: 30)
-                                .background(
-                                    Circle()
-                                        .foregroundColor(getButtonColor(for: day))
-                                )
+                            Image(systemName: "list.bullet")
                                 .foregroundColor(Color("FistGreen"))
-                                .scaleEffect(selectedDate == day ? 1.2 : 1.0)
-                                .overlay(
-                                    favoriteButtonOverlay(for: factOfTheDay)
-                                        .opacity(selectedDate == day ? 1.0 : 0.0)
-                                )
+                                .padding(.bottom, 30)
+                                .frame(width: 70, height: 90)
+                                .imageScale(.large)
                         }
-                        .buttonStyle(PlainButtonStyle())
                     }
-                }
-                .padding(.bottom, 56)
-            }
-            .onAppear {
-                let currentDate = Date()
-                let formattedDate = dateFormatter.string(from: currentDate)
-                factOfTheDay = dataSource.facts[formattedDate] ?? Fact(title: "Title of the Fact", content: "Content of the Fact", date: formattedDate)
-                
-                if factOfTheDay.title != "No fact available today" {
-                    addOrUpdateAllDayEventToCalendar(title: factOfTheDay.title, notes: factOfTheDay.content, date: currentDate)
-                }
-            }
-            
-            .sheet(isPresented: $isFactDisplayed) {
-                if let date = selectedDate {
-                    FactSheet(fact: factOfTheDay, dateFormatter: dateFormatter, isPresented: $isFactDisplayed)
-                } else {
-                    EmptyView()
-                }
-            }
-            .sheet(isPresented: $isFactListPresented) {
-                FactListView(facts: facts, isPresented: $isFactListPresented, selectedFact: $selectedFact)
-                    .navigationBarBackButtonHidden(true)
-                    .toolbar {
-                        ToolbarItem(placement: .navigationBarLeading) {
-                            NavigationLink(destination: MissionStatementView()) {
-                                Image("Fist")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(height: 55)
-                                    .padding()
-                            }
+                    Spacer()
+                    
+//                    ScrollView {
+//                        VStack(spacing: 8) {
+//                            Text("Today In Black History")
+//                                .font(.headline)
+//                        
+//                            Text(factOfTheDay.title)
+//                                .font(.headline)
+//                                .foregroundColor(.red)
+//                                .multilineTextAlignment(.center)
+//                            
+//                            Text(factOfTheDay.content)
+//                                .font(.body)
+//                                .foregroundColor(Color("FistGreen"))
+//                                .multilineTextAlignment(.center)
+//                        }
+//                        .padding(.horizontal)
+//                        .padding(.leading, -5)
+//                    }
+                    
+                    Picker("Month", selection: $selectedMonth) {
+                        ForEach(1..<13) { month in
+                            Text(self.months[month - 1])
+                                .tag(month)
+                                .foregroundColor(Color("FistGreen"))
                         }
-                        
-                        ToolbarItem(placement: .navigationBarTrailing) {
+                    }
+                    .pickerStyle(WheelPickerStyle())
+                    .padding(.top)
+                    
+                    LazyVGrid(columns: Array(repeating: GridItem(), count: 7), spacing: 16) {
+                        ForEach(getDaysOfMonth(), id: \.self) { day in
                             Button(action: {
-                                isFactListPresented = true
+                                withAnimation {
+                                    selectedDate = day
+                                    factOfTheDay = fetchFactOfTheDay(for: day)
+                                    isFactDisplayed = true
+                                }
+                                toggleFavoriteFact(factOfTheDay)
                             }) {
-                                Image(systemName: "list.bullet")
+                                Text(getDayNumber(from: day))
+                                    .font(.headline)
+                                    .frame(width: 30, height: 30)
+                                    .background(
+                                        Circle()
+                                            .foregroundColor(getButtonColor(for: day))
+                                    )
                                     .foregroundColor(Color("FistGreen"))
-                                    .padding()
+                                    .scaleEffect(selectedDate == day ? 1.2 : 1.0)
+                                    .overlay(
+                                        favoriteButtonOverlay(for: factOfTheDay)
+                                            .opacity(selectedDate == day ? 1.0 : 0.0)
+                                    )
+                            }
+                            .buttonStyle(PlainButtonStyle())
+                        }
+                    }
+                    .padding(.bottom, 56)
+                }
+                .onAppear {
+                    let currentDate = Date()
+                    let formattedDate = dateFormatter.string(from: currentDate)
+                    factOfTheDay = dataSource.facts[formattedDate] ?? Fact(title: "Title of the Fact", content: "Content of the Fact", date: formattedDate)
+                    
+                    if factOfTheDay.title != "No fact available today" {
+                        addOrUpdateAllDayEventToCalendar(title: factOfTheDay.title, notes: factOfTheDay.content, date: currentDate)
+                    }
+                }
+                
+                .sheet(isPresented: $isFactDisplayed) {
+                    if let date = selectedDate {
+                        FactSheet(fact: factOfTheDay, dateFormatter: dateFormatter, isPresented: $isFactDisplayed)
+                    } else {
+                        EmptyView()
+                    }
+                }
+                .sheet(isPresented: $isFactListPresented) {
+                    FactListView(facts: facts, isPresented: $isFactListPresented, selectedFact: $selectedFact)
+                .navigationBarBackButtonHidden(true)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        NavigationLink(destination: MissionStatementView()) {
+                            Image("Fist")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(height: 55)
+                                .padding()
+                        }
+                    }
+                            
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button(action: {
+                            isFactListPresented = true
+                        }) {
+                            Image(systemName: "list.bullet")
+                                .foregroundColor(Color("FistGreen"))
+                                .padding()
                             }
                         }
                     }
+                }
             }
         }
     }
